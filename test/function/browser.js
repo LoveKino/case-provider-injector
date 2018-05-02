@@ -51,4 +51,13 @@ describe('index', () => {
       }]);
     });
   });
+
+  it('grep', () => {
+    return browserJsEnv(`module.exports = require('${path.join(__dirname, '../cases/grep.js')}')`, {
+      open: headlessOpen,
+      clean: true
+    }).then((casesData) => {
+      assert.deepEqual(casesData.length, 1);
+    });
+  });
 });
