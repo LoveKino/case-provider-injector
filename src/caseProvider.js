@@ -26,8 +26,8 @@ const provideCases = (groupName, caseList) => {
         //filter cases
         let cases = caseList.slice(from, to + 1);
         if (globalTestConfig.grep) {
-          const reg = new RegExp(globalTestConfig.grep);
-          cases = cases.filter((item) => reg.test(item.name));
+          const reg = new RegExp(globalTestConfig.grep.toLowerCase());
+          cases = cases.filter((item) => reg.test(item.name.toLowerCase()));
         }
         // TODO grep
         return reportUnits(cases, groupPrefix);

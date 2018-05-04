@@ -1,6 +1,6 @@
 {
   "name": "case-provider-injector",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "injector part to provide cases which can run in any testing containers",
   "main": "index.js",
   "scripts": {
